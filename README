@@ -1,4 +1,22 @@
+-----------------------------------------------------------
+Tags
 
+## -dt: Executa o container em background e libera o terminal
+## -d: Executa o container em background
+## -t: Aloca um pseudo-TTY
+## -i: Mantem STDIN aberto mesmo que não esteja conectado
+## -p: Mapeia a porta do host para o container
+## -v: Mapeia um volume do host para o container
+## -u: Executa o container como root
+## -f: Força a execução do comando
+## -q: Retorna apenas o ID do container
+## -a: Retorna todos os containers
+## -h: Retorna o help
+## -it: Executa o container e abre o terminal
+## -rm: Remove o container após a execução
+## --name: Nomeia o container
+
+------------------------------------------------------------
 ## Subir um conatiner e liberar o terminar atraves do docker-compose 
 ``` docker-compose up -d ```
 
