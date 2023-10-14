@@ -1,0 +1,51 @@
+
+## Subir um conatiner e liberar o terminar atraves do docker-compose 
+``` docker-compose up -d ```
+
+## Desligar o container atraves do docker-compose
+``` docker-compose down ```
+
+## Listar os containers em execução
+``` docker ps ```
+
+## Listar o historico de containers
+``` docker ps -a ```
+
+## Listar as imagens
+``` docker images ```
+
+## Remover uma imagem
+``` docker rmi <image_id> ```
+
+## Remover todas as imagens
+``` docker rmi $(docker images -q) -f ```
+
+## Remover um container
+``` docker rm <container_id> -f ```
+
+## Remover todos os containers
+``` docker rm $(docker ps -a -q) -f ```
+
+## Acessar o terminal do container
+``` docker exec -it <container_id> bash ```
+
+## Acessar o terminal do container como root
+``` docker exec -it -u root <container_id> bash ```
+
+## Fazer build de uma imagem atraves do dockerfile
+``` docker build -t <image_name> . ```
+
+## Fazer build de uma imagem atraves do dockerfile com um nome especifico
+``` docker build -t <image_name>:<tag> . ```
+
+##  Criar um container e passar o volume para o host
+``` docker run -d -v <host_path>:<container_path> <image_name> ```
+``` docker run -d -v <host_path>:<container_path> <image_name>:<tag> ```
+
+## Criar um container e passar o volume para o host e mapear a porta
+``` docker run -d -v <host_path>:<container_path> -p <host_port>:<container_port> <image_name> ```
+``` docker run -d -v <host_path>:<container_path> -p <host_port>:<container_port> <image_name>:<tag> ```
+
+## Executar um container e abrir o terminal bash 
+``` docker run -it <image_name> bash ```
+``` docker run -it <image_name>:<tag> bash ```
