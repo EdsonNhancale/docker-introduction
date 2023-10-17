@@ -67,3 +67,5 @@
 ## Executar um container e abrir o terminal bash 
 ``` docker run -it <image_name> bash ```
 ``` docker run -it <image_name>:<tag> bash ```
+## Executar um container referenciando um volume
+``` docker run --rm -it -v $(pwd)/<host_path>:<container_path> <image_name> bash ```
